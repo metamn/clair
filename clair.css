@@ -1,0 +1,35 @@
+
+/* Header
+*/
+
+#header h2 {
+  display: inline-block;
+  top: -.3em;
+  position: relative;
+}
+#header a {
+  text-decoration: none;
+}
+#header #search {
+  float: right;
+}
+#header #search {
+  margin-top: 1.7em;
+}
+
+
+/* Index
+*/
+
+#content.blog #meta > div {
+  float: right;
+  text-align: right;
+}
+
+
+/* Footer
+*/
+#footer #contact {
+  float: right;
+  text-align: right;
+}
