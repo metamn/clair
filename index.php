@@ -18,7 +18,16 @@ get_header(); ?>
 			    </div>				    
         </div> 
         <div id="meta" class="column span-8 last">
-          <div class="postmetadata"><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', ') ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></div>
+          <div class="postmetadata">
+          <?php
+            echo '<ul class="categories">'; 
+            post_categories($post->ID);
+            echo '</ul>';
+            the_tags('Tags: ', ', ', '<br />');
+            echo get_post_meta($post->ID, 'Excerpt', true);            
+            comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); 
+          ?>
+          </div>
         </div> 				    
 			</div>
 		<?php endwhile; ?>
