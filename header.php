@@ -45,10 +45,7 @@
 	    </div>
 	    
 	    <div id="intro" class="column span-24 last">
-	      <p>We <a href="">Think</a>, <a href="">Design</a> and <a href="">Code</a> beautiful <a href="">websites</a>, 
-	      the best <a href="">online shops</a>, and usable <a href="">web applications</a>.</p>
-	      <p>In our spare time we launch <a href="">startups</a> and <a href="">consulting</a> businesses for web and new media.</p>  
-	      <p>We deliver fast by using the most performant <a href="">technologies</a> available today.</p>
+	      <?php echo get_page_by('about'); ?>
 	    </div>
 	    		  	
 	    

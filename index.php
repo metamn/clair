@@ -7,30 +7,9 @@
 get_header(); ?>
 
 	<div id="content" class="blog column span-24 last">	
-  <?php if (have_posts()) : ?>
-    <?php while (have_posts()) : the_post(); ?>
-		  <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			  <div id="body" class="column span-16 last">
-				  <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-				  <small><?php the_time('F jS, Y') ?> <!-- by <?php the_author() ?> --></small>
-			    <div class="entry">
-				    <?php the_content('Read the rest of this entry &raquo;'); ?>
-			    </div>				    
-        </div> 
-        <div id="meta" class="column span-8 last">
-          <div class="postmetadata">
-          <?php
-            echo '<ul class="categories">'; 
-            post_categories($post->ID);
-            echo '</ul>';
-            the_tags('Tags: ', ', ', '<br />');
-            echo get_post_meta($post->ID, 'Excerpt', true);            
-            comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); 
-          ?>
-          </div>
-        </div> 				    
-			</div>
-		<?php endwhile; ?>
+  <?php if (have_posts()) : while (have_posts()) : the_post();
+		  include "post.php";
+		endwhile; ?>
 
 		<div class="navigation">
 			<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>

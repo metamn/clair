@@ -1,4 +1,23 @@
 
+/* Theme
+
+blue = #6a00fb;
+brown = #B2B481;
+gold = #CFD381;
+yellow = E8F100;
+
+*/
+
+a {
+  color: #6a00fb;
+}
+a:visited {
+  color: #222;
+}
+
+
+
+
 /* General
 */
 
@@ -30,12 +49,29 @@ img {
 /* Index
 */
 
-#content.blog #meta > div {
-  float: right;
-  text-align: right;
+#content.blog .post {
+  margin: 3em 0 2em 0;
+}
+#content #meta > div {
+  margin-left: 6em;
+}
+#content #meta > h1 {
+  margin-left: 2em;
+}
+#content #meta ul {
+  list-style-type: none;
+  margin: 0 0 3em;
+}
+#content #meta ul li {
+  margin-bottom: 1em;
+}
+#content #meta #excerpt {
+  margin-bottom: 2em;
 }
 
-
+#content.search {
+  padding: 3em 0 2em;
+}
 
 
 /* Footer

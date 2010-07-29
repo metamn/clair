@@ -1,14 +1,5 @@
 <?php 
 
-
-
-
-// Getting the content of a page identified by $title
-// - used in Archives to insert a brief description about an archive item
-function get_page_by($title) {
-  return false;
-}
-
 // Returns only the meaningful categories of a post excluding parent categories like Aspects, Business, Technology ...
 function post_categories($id) {
   $exclude = array(3, 8, 14);
@@ -17,6 +8,14 @@ function post_categories($id) {
       echo '<li><a href="'.get_category_link($cat->cat_ID).'">'.$cat->cat_name .'</a></li>';
     }
   }
+}
+
+
+// Returns the content of a page
+// - $page is the page slug
+function get_page_by($page) {
+    $p = get_page_by_path($page);   
+    return $p->post_content;
 }
 
 ?>
